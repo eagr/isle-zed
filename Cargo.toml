@@ -1,0 +1,13 @@
+[package]
+publish = false
+name = "zed_isle"
+version = "0.0.1"
+edition = "2021"
+license = "Apache-2.0"
+
+[lib]
+path = "src/isle.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+zed_extension_api = "0.2.0"

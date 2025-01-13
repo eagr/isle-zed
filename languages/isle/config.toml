@@ -1,0 +1,12 @@
+name = "ISLE"
+grammar = "isle"
+path_suffixes = ["isle"]
+line_comments = ["; "]
+autoclose_before = ";)"
+brackets = [
+    { start = "(", end = ")", close = true, newline = false },
+    { start = "(;", end = " ;", close = true, newline = false, not_in = [
+        "comment",
+    ] },
+]
+collapsed_placeholder = " (; ... ;) "
