@@ -24,7 +24,15 @@
 (bool) @boolean
 (wildcard) @keyword
 
-(_ op: _ @keyword)
+(pattern_term
+  . (ident) @function
+  (#match? @function "^[a-z]"))
+(expr_term
+  . (ident) @function
+  (#match? @function "^[a-z]"))
+
+(_ op: _ @keyword
+  (#match? @keyword "(pragma|type|primitive|enum|decl|rule|extractor|extern|convert|and|if-let|if|let|model|form|spec|provide|require|instantiate|bv|args|ret|canon)"))
 (_ modifier: _ @keyword
   (#match? @keyword "(extern|nodebug|infallible)"))
 (_ kind: _ @keyword
